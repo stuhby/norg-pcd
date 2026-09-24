@@ -136,3 +136,31 @@ just the score.
 Scope is derived from the database (`GROUP_CONCAT(DISTINCT arr_type)` per `(Norg)` format,
 expanding `all`), never assumed, because formats created by an earlier op are absent from the
 current op's own map. Unknown scope falls back to the bare name, which fails safe.
+
+## 903 -- scoring HD Bluray Tier 04 (2026-09-23)
+
+`HD Bluray Tier 04 (Norg)` scores **1850** in `[Norg] 1080p Encode (Sonarr)` and nowhere else.
+That profile runs 2000 / 1950 / 1900 for Tier 01 / 02 / 03 in 50-point steps; the other 13
+Sonarr profiles that score the HD Bluray tiers stop at Tier 02, so a fourth rung there would
+be inventing two tiers they never had.
+
+**What it really changes.** In that profile the top quality group is
+`Bluray-1080p Remux + Bluray-1080p`, and inside a group the custom format score is the ONLY
+tiebreak. So the eight Tier 04 groups move from below every Remux tier (1000-1150) to above
+it. Six of them (BHDStudio, hallowed, HiFi, LoRD, SPHD, W4NK3R) previously scored 150,
+baseline only. It also restores playHD, which scored 1900 through the old hand-built
+"HD Bluray Tier 04" and would otherwise have dropped to baseline, since op 901 moved it out
+of Tier 03 to match Radarr.
+
+**(!) HONE ALREADY OUTSCORES EVERY OTHER GROUP ON BLURAY, AND THIS IS NOT OUR DOING.**
+Measured against the LIVE Sonarr before any of this: a HONE 1080p Bluray encode scores 3058
+while the best Tier 01 group scores 2050. The driver is `WEB Tier 01` (1700): its two source
+conditions (WEBDL, WEBRIP) are OPTIONAL and sit alongside an optional group list, so under Arr
+semantics a group match alone satisfies it and it applies to a Bluray release. Stacked with
+`HONE Bluray` (1200) and `HONE` (8) that puts HONE on top. op 903 widens the lead to 4908.
+If HONE should not lead, the levers are `HONE Bluray` and that WEB Tier 01 quirk, not Tier 04.
+
+**Tiers cannot stack:** Remux tiers require `bluray_raw`, the HD Bluray tiers require `bluray`
+and negate `bluray_raw`, so a release matches one side or the other, never both.
+
+Verification now expects exactly ONE difference against the live Arrs, this deliberate row.

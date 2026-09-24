@@ -1,0 +1,26 @@
+-- 903.norg-score-hd-bluray-tier-04.sql
+--
+-- Scores HD Bluray Tier 04 (Norg) in the one Sonarr profile that carries a Bluray
+-- tier ladder deeper than two rungs.
+--
+-- [Norg] 1080p Encode (Sonarr) runs 2000 / 1950 / 1900 for HD Bluray Tier 01 / 02 /
+-- 03 (Norg), in 50-point steps, so Tier 04 takes 1850. The other 13 Sonarr profiles
+-- that score the HD Bluray tiers stop at Tier 02, so adding a fourth rung there would
+-- be inventing two tiers they have never had.
+--
+-- Tier 04 (Norg) is the Sonarr port of Radarr's HD Bluray Tier 03: BHDStudio, hallowed,
+-- HiFi, HONE, LoRD, playHD, SPHD, W4NK3R.
+--
+-- (!) WHAT THIS ACTUALLY CHANGES is not the 50-point gap. In [Norg] 1080p Encode the top
+-- quality group is Bluray-1080p Remux + Bluray-1080p, and inside a group the custom format
+-- score is the ONLY tiebreak, so these eight groups now sit above every Remux tier
+-- (1000-1150) instead of below it. Six of them (BHDStudio, hallowed, HiFi, LoRD, SPHD,
+-- W4NK3R) scored 0 before and therefore lost to any remux.
+--
+-- It also restores playHD, which scored 1900 through the old hand-built "HD Bluray Tier 04"
+-- and would otherwise have dropped to 0, since op 901 moved it out of Tier 03 to match Radarr.
+--
+-- The tiers cannot stack: Remux tiers require bluray_raw, the HD Bluray tiers require
+-- bluray and negate bluray_raw, so a release matches one side or the other.
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
+VALUES ('[Norg] 1080p Encode (Sonarr)', 'HD Bluray Tier 04 (Norg)', 'sonarr', 1850);
