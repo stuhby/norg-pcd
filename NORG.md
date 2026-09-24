@@ -197,3 +197,20 @@ Resulting ladder for a 1080p Bluray encode:
 **(!) `HONE Bluray (Norg)` is deliberately UNTOUCHED elsewhere**: 1500 in `[Norg] Anime` and
 `[Norg] Anime (CR)` (neither scores an HD Bluray tier, so nothing stacks), and 4000/4000/5000
 across the three Radarr profiles, where HONE and hallowed are meant to lead.
+
+## 905 -- drop the HONE nudge in 1080p Encode (2026-09-23)
+
+`HONE (Norg)` is the imported local Sonarr format matching `^(HONE|DiscoD|Weasley)$` with
+**no source or resolution guard**, so it stacked on top of the tier and left HONE 8 points
+clear of its own peers. Removed from `[Norg] 1080p Encode (Sonarr)` only. HONE now sits level
+with hallowed, SPHD, LoRD, HiFi, W4NK3R, playHD and BHDStudio at 1900.
+
+**(!) The format is unguarded, so this also drops the same 8 from DiscoD and Weasley** in
+this profile (58 -> 50 on a 1080p Bluray). Neither is in any Bluray tier, so that nudge was
+the only thing scoring them there.
+
+Left alone everywhere else: 8 in 1080p x265, 4K Encode, 4K Encode (TrueHD), Anime, Anime (CR);
+12 in the four 480p x265 profiles; 51 in 4K Remux and 1080p Remux; 12/51 on the Radarr side.
+
+Running total of deliberate deviations from the live Arrs, all in `1080p Encode (Sonarr)`:
+Tier 04 added at 1850, `HONE Bluray` removed, `HONE` removed.
