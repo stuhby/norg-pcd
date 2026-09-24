@@ -230,3 +230,36 @@ test. The score check could never see it, because scores were never involved. Th
 now deliberately unimported is `id`, which the Arr assigns. The four numeric fields
 (`upgradeAllowed`, `minFormatScore`, `cutoffFormatScore`, `minUpgradeFormatScore`) were
 re-audited across all 27 profiles at the same time: 0 mismatches.
+
+## 907 -- live media management, because Profilarr refuses to sync without it (2026-09-24)
+
+**Profilarr will not sync quality profiles until a naming config, a quality-definitions config,
+a media-settings config AND a delay profile are all selected for the instance.** Both Sync runs
+on 2026-09-24 finished as `skipped` for exactly this reason, with no error anywhere: the only
+signal is a yellow line in the UI and `status=skipped` in `job_run_history`.
+
+**(!) EVERY PRE-EXISTING OPTION WOULD HAVE CHANGED LIVE BEHAVIOUR**, measured against the running
+Arrs rather than assumed:
+
+- All **9** Sonarr naming configs differ, including `series_folder_format`: live is
+  `{Series TitleYear} {imdb-{ImdbId}}`, every option is `{Series CleanTitleWithoutYear} {(Series Year)}...`.
+  Sonarr does not retro-rename, but NEW imports would land in differently-named folders.
+- **100%** of the quality definitions differ (20/20, 14/14, 21/21, 14/14, 9/9, 8/8). These govern
+  accepted file SIZES.
+- The `Default` delay profile is `prefer_torrent` with 0/0 delays against a live usenet-preferred
+  15/60.
+
+So op 907 mirrors the LIVE settings 1:1 as **`Norg (live)`** (and `Norg Sonarr/Radarr (live)` for
+the delay profiles). Selecting these satisfies the requirement and pushes byte-identical values.
+Verified after replay: naming identical both arrs, all 52 quality definitions identical.
+
+**(!) TWO SCHEMA TRAPS.** Quality definitions are keyed on the PCD's CANONICAL quality name with a
+foreign key, not the Arr's `api_name` (Sonarr reports `Bluray-1080p Remux`, the PCD wants
+`Remux-1080p`), so they must be mapped through `quality_api_mappings` or the insert dies on the FK.
+And `minimum_custom_format_score` must be **NULL** unless `bypass_if_above_custom_format_score` is
+1. That mirrors the Arr, where the threshold is inert while the toggle is off, so live's stored
+3341 (Sonarr) / 3000 (Radarr) does nothing and NULL is the faithful value, not a loss of a gate.
+
+**The media-settings configs are a no-op:** the pre-existing `Default` already matched live exactly
+(`doNotPrefer` / media info on) for both arrs. `Norg (live)` is added only so all four dropdowns
+name the same source.
