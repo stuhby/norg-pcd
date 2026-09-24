@@ -164,3 +164,36 @@ If HONE should not lead, the levers are `HONE Bluray` and that WEB Tier 01 quirk
 and negate `bluray_raw`, so a release matches one side or the other, never both.
 
 Verification now expects exactly ONE difference against the live Arrs, this deliberate row.
+
+## 904 -- HONE not leading (2026-09-23)
+
+op 903 put HONE into `HD Bluray Tier 04 (Norg)` at 1850 while `HONE Bluray (Norg)` was
+already scoring it 1200 in the same profile. The two stacked and HONE reached 3108 against
+1950 for the Tier 03 groups, topping the profile, which is the opposite of the intent.
+op 904 drops the `HONE Bluray` row from `[Norg] 1080p Encode (Sonarr)` only.
+
+**(!) A PREVIOUS ANALYSIS HERE WAS WRONG AND IS RETRACTED.** It claimed HONE already led at
+3058 because `WEB Tier 01` applied to Bluray releases, reasoning that the format has ZERO
+required specs so any one of its 24 optional specs satisfies it. Sonarr does not work that
+way: optional conditions are OR'd **within an implementation type** and AND'd **across**
+types, so WEB Tier 01 means (one of 22 groups) AND (WEBDL or WEBRIP), and a Bluray fails the
+source clause. Proven with Sonarr's own `/api/v3/parse`: a `1080p.BluRay.x264-HONE` title
+matches `HONE`, `HONE Bluray`, `x265 (HD)` and friends, and does NOT match `WEB Tier 01`; a
+WEBDL from a group not on the list does not match it either.
+
+**USE `/api/v3/parse` TO SETTLE ANY MATCHING QUESTION.** It returns the exact custom formats
+Sonarr assigns to a title, so it replaces reasoning about required/optional semantics
+entirely. Measured on `1080p.BluRay.x264-<group>` before these ops: CRiSC/BBQ/playHD 1950,
+HONE 1258, hallowed/SPHD/BHDStudio 50 (baseline only). HONE did NOT lead beforehand.
+
+Resulting ladder for a 1080p Bluray encode:
+
+    Tier 01 groups         2050
+    Tier 02 groups         2000
+    Tier 03 (Norg) groups  1950
+    HONE                   1908   (tier 1850 + HONE (Norg) 8 + 1080p 50)
+    Tier 04 (Norg) peers   1900
+
+**(!) `HONE Bluray (Norg)` is deliberately UNTOUCHED elsewhere**: 1500 in `[Norg] Anime` and
+`[Norg] Anime (CR)` (neither scores an HD Bluray tier, so nothing stacks), and 4000/4000/5000
+across the three Radarr profiles, where HONE and hallowed are meant to lead.
