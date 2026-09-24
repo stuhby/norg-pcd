@@ -119,3 +119,20 @@ attempt. With the pragma on, the full 149-op replay is clean: 0 errors, 0 orphan
 
 **Upstream is untouched, asserted not assumed:** all 1,442 upstream condition rows and all
 1,457 upstream profile scores are identical to a pristine trash-pcd replay.
+## Arr-scoped format resolution (2026-09-23)
+
+A `(Norg)` format supersedes the bare upstream one **only for the arr it actually carries
+conditions for**. Sonarr's hand-built UHD Bluray tiers and Remux Tier 03 became `(Norg)`;
+Radarr's are stock upstream. Resolving by name alone pointed four Radarr profiles at
+`UHD Bluray Tier 01/02 (Norg)`, `HD Bluray Tier 03 (Norg)` and `Remux Tier 03 (Norg)`,
+which carry **zero** radarr-scoped conditions, so those formats would have matched nothing
+in Radarr while still looking correctly scored.
+
+**(!) A SCORE-ONLY VERIFICATION CANNOT CATCH THIS.** Both sides of that check used the same
+mapping, so it is circular and reported 27/27 with 0 discrepancies throughout. What found it
+was comparing each format's CONDITIONS against the live Arr. Always diff the definition, not
+just the score.
+
+Scope is derived from the database (`GROUP_CONCAT(DISTINCT arr_type)` per `(Norg)` format,
+expanding `all`), never assumed, because formats created by an earlier op are absent from the
+current op's own map. Unknown scope falls back to the bare name, which fails safe.

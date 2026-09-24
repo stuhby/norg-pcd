@@ -2402,8 +2402,8 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'FR LQ', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'HDR10', 'radarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'TrueHD ATMOS', 'radarr', 5000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'UHD Bluray Tier 01 (Norg)', 'radarr', 1800);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'HD Bluray Tier 03 (Norg)', 'radarr', 1700);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'UHD Bluray Tier 01', 'radarr', 1800);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'HD Bluray Tier 03', 'radarr', 1700);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Remaster', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Repack3', 'radarr', 7);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'VRV', 'radarr', 10);
@@ -2411,7 +2411,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Sing-Along Versions', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'hallowed', 'radarr', 600);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'FastSUB', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Remux Tier 03 (Norg)', 'radarr', 1850);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Remux Tier 03', 'radarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'SiC', 'radarr', 11);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'DTS-HD HRA', 'radarr', 2000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'LQ', 'radarr', -10000);
@@ -2423,7 +2423,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Remux Tier 02', 'radarr', 1900);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Opus', 'radarr', 250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'FLAC', 'radarr', 2250);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'UHD Bluray Tier 02 (Norg)', 'radarr', 1750);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'UHD Bluray Tier 02', 'radarr', 1750);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', '10bit', 'radarr', 250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Repack2', 'radarr', 6);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'No-RlsGroup', 'radarr', -10000);
@@ -2443,7 +2443,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Criterion Collection', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'LQ (Release Title)', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Generated Dynamic HDR', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'UHD Bluray Tier 03 (Norg)', 'radarr', 1700);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'UHD Bluray Tier 03', 'radarr', 1700);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Repack/Proper', 'radarr', 5);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'PCM', 'radarr', 2250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', '4K Remaster', 'radarr', 25);
@@ -2514,8 +2514,8 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'FR LQ', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'HDR10', 'radarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'TrueHD ATMOS', 'radarr', 5000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'UHD Bluray Tier 01 (Norg)', 'radarr', 1800);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'HD Bluray Tier 03 (Norg)', 'radarr', 1700);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'UHD Bluray Tier 01', 'radarr', 1800);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'HD Bluray Tier 03', 'radarr', 1700);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Remaster', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Repack3', 'radarr', 7);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'VRV', 'radarr', 10);
@@ -2523,7 +2523,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Sing-Along Versions', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'hallowed', 'radarr', 600);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'FastSUB', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Remux Tier 03 (Norg)', 'radarr', 1850);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Remux Tier 03', 'radarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'SiC', 'radarr', 11);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'DTS-HD HRA', 'radarr', 2000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'LQ', 'radarr', -10000);
@@ -2535,7 +2535,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Remux Tier 02', 'radarr', 1900);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Opus', 'radarr', 250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'FLAC', 'radarr', 2250);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'UHD Bluray Tier 02 (Norg)', 'radarr', 1750);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'UHD Bluray Tier 02', 'radarr', 1750);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', '10bit', 'radarr', 250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Repack2', 'radarr', 6);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'No-RlsGroup', 'radarr', -10000);
@@ -2554,7 +2554,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Criterion Collection', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'LQ (Release Title)', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Generated Dynamic HDR', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'UHD Bluray Tier 03 (Norg)', 'radarr', 1700);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'UHD Bluray Tier 03', 'radarr', 1700);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Repack/Proper', 'radarr', 5);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'PCM', 'radarr', 2250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', '4K Remaster', 'radarr', 25);
@@ -2615,8 +2615,8 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'WEB Tier 02', 'radarr', 1650);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'FR LQ', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'HDR10', 'radarr', -225);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'BHDStudio (Norg)', 'radarr', -75);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'HD Bluray Tier 03 (Norg)', 'radarr', 1700);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'BHDStudio', 'radarr', -75);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'HD Bluray Tier 03', 'radarr', 1700);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'Remaster', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'Repack3', 'radarr', 7);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'VRV', 'radarr', 10);
@@ -2726,13 +2726,13 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'ATMOS (undefined)', 'radarr', 3000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'HDR10', 'radarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'TrueHD ATMOS', 'radarr', 5000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'UHD Bluray Tier 01 (Norg)', 'radarr', 2300);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'UHD Bluray Tier 01', 'radarr', 2300);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'Remaster', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'Repack3', 'radarr', 7);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'Sing-Along Versions', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'hallowed', 'radarr', 51);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', '1080p', 'radarr', 50);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'Remux Tier 03 (Norg)', 'radarr', 1850);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'Remux Tier 03', 'radarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'DTS-HD HRA', 'radarr', 2000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'LQ', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'DV (w/o HDR fallback)', 'radarr', -10000);
@@ -2741,7 +2741,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'IMAX Enhanced', 'radarr', 800);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'Remux Tier 02', 'radarr', 1900);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'FLAC', 'radarr', 2250);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'UHD Bluray Tier 02 (Norg)', 'radarr', 2200);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'UHD Bluray Tier 02', 'radarr', 2200);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'Repack2', 'radarr', 6);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'WEB Tier 03', 'radarr', 1600);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'DV Boost', 'radarr', 1000);
@@ -2756,7 +2756,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'Criterion Collection', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'LQ (Release Title)', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'Generated Dynamic HDR', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'UHD Bluray Tier 03 (Norg)', 'radarr', 2100);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'UHD Bluray Tier 03', 'radarr', 2100);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'Repack/Proper', 'radarr', 5);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'PCM', 'radarr', 2250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', '4K Remaster', 'radarr', 25);
@@ -2825,9 +2825,9 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'WEB Tier 02', 'radarr', 1650);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'FR LQ', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'HDR10', 'radarr', 500);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'UHD Bluray Tier 01 (Norg)', 'radarr', 1800);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'BHDStudio (Norg)', 'radarr', -100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'HD Bluray Tier 03 (Norg)', 'radarr', 1700);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'UHD Bluray Tier 01', 'radarr', 1800);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'BHDStudio', 'radarr', -100);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'HD Bluray Tier 03', 'radarr', 1700);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'Remaster', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'Repack3', 'radarr', 7);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'VRV', 'radarr', 10);
@@ -2835,7 +2835,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'hallowed', 'radarr', 600);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'FastSUB', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'MainFrame', 'radarr', 51);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'Remux Tier 03 (Norg)', 'radarr', 1850);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'Remux Tier 03', 'radarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'SiC', 'radarr', 11);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'LQ', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'DV (w/o HDR fallback)', 'radarr', -10000);
@@ -2843,7 +2843,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'Masters of Cinema', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'IMAX Enhanced', 'radarr', 800);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'Remux Tier 02', 'radarr', 1900);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'UHD Bluray Tier 02 (Norg)', 'radarr', 1750);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'UHD Bluray Tier 02', 'radarr', 1750);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'Repack2', 'radarr', 6);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'No-RlsGroup', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'WEB Tier 03', 'radarr', 1600);
@@ -2860,7 +2860,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'Criterion Collection', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'LQ (Release Title)', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'Generated Dynamic HDR', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'UHD Bluray Tier 03 (Norg)', 'radarr', 1700);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'UHD Bluray Tier 03', 'radarr', 1700);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'Repack/Proper', 'radarr', 5);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', '4K Remaster', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'HD Bluray Tier 01', 'radarr', 1800);
@@ -2932,8 +2932,8 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (TRaSH)', 'CRiT', 'radarr', 20);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (TRaSH)', 'MA', 'radarr', 20);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (TRaSH)', 'WEB Tier 02', 'radarr', 1650);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (TRaSH)', 'BHDStudio (Norg)', 'radarr', -250);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (TRaSH)', 'HD Bluray Tier 03 (Norg)', 'radarr', 1700);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (TRaSH)', 'BHDStudio', 'radarr', -250);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (TRaSH)', 'HD Bluray Tier 03', 'radarr', 1700);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (TRaSH)', 'Remaster', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (TRaSH)', 'Repack3', 'radarr', 7);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (TRaSH)', 'Sing-Along Versions', 'radarr', -10000);
@@ -3016,9 +3016,9 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'WEB Tier 02', 'radarr', 1650);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'FR LQ', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'HDR10', 'radarr', 500);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'UHD Bluray Tier 01 (Norg)', 'radarr', 1800);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'BHDStudio (Norg)', 'radarr', -100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'HD Bluray Tier 03 (Norg)', 'radarr', 1700);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'UHD Bluray Tier 01', 'radarr', 1800);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'BHDStudio', 'radarr', -100);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'HD Bluray Tier 03', 'radarr', 1700);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'Remaster', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'Repack3', 'radarr', 7);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'VRV', 'radarr', 10);
@@ -3026,7 +3026,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'hallowed', 'radarr', 600);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'FastSUB', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'MainFrame', 'radarr', 51);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'Remux Tier 03 (Norg)', 'radarr', 1850);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'Remux Tier 03', 'radarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'SiC', 'radarr', 11);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'LQ', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'DV (w/o HDR fallback)', 'radarr', -10000);
@@ -3034,7 +3034,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'Masters of Cinema', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'IMAX Enhanced', 'radarr', 800);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'Remux Tier 02', 'radarr', 1900);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'UHD Bluray Tier 02 (Norg)', 'radarr', 1750);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'UHD Bluray Tier 02', 'radarr', 1750);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'Repack2', 'radarr', 6);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'No-RlsGroup', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'WEB Tier 03', 'radarr', 1600);
@@ -3051,7 +3051,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'Criterion Collection', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'LQ (Release Title)', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'Generated Dynamic HDR', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'UHD Bluray Tier 03 (Norg)', 'radarr', 1700);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'UHD Bluray Tier 03', 'radarr', 1700);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'Repack/Proper', 'radarr', 5);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', '4K Remaster', 'radarr', 25);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'HD Bluray Tier 01', 'radarr', 1800);
