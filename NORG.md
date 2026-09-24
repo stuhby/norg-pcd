@@ -214,3 +214,19 @@ Left alone everywhere else: 8 in 1080p x265, 4K Encode, 4K Encode (TrueHD), Anim
 
 Running total of deliberate deviations from the live Arrs, all in `1080p Encode (Sonarr)`:
 Tier 04 added at 1850, `HONE Bluray` removed, `HONE` removed.
+
+## 906 -- the per-profile language (2026-09-23)
+
+The 1:1 import missed `quality_profile_languages` entirely. All seven live Radarr profiles
+are set to **Original**, and upstream trash-pcd sets the same on its own profiles, but op 902
+emitted no language rows. Pushing a Radarr profile with no language would let it fall back to
+Profilarr's default, and Original vs English or Any changes which releases are accepted.
+
+Sonarr is unaffected: Sonarr v4 has no per-profile language, all 20 report none.
+
+**(!) AUDIT THE WHOLE FIELD SET, NOT JUST THE ONES YOU BUILT AGAINST.** This was found by
+diffing every key on a live Arr profile against the list the generator consumes, not by any
+test. The score check could never see it, because scores were never involved. The only key
+now deliberately unimported is `id`, which the Arr assigns. The four numeric fields
+(`upgradeAllowed`, `minFormatScore`, `cutoffFormatScore`, `minUpgradeFormatScore`) were
+re-audited across all 27 profiles at the same time: 0 mismatches.
