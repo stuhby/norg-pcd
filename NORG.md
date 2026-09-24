@@ -263,3 +263,29 @@ And `minimum_custom_format_score` must be **NULL** unless `bypass_if_above_custo
 **The media-settings configs are a no-op:** the pre-existing `Default` already matched live exactly
 (`doNotPrefer` / media info on) for both arrs. `Norg (live)` is added only so all four dropdowns
 name the same source.
+
+## 908 -- undoing a regression op 900 introduced (2026-09-24)
+
+**(!) op 900 CREATED A TIER OVERLAP THAT DID NOT EXIST BEFORE.** The hand-built Sonarr UHD tiers
+were cleanly separated: Tier 01 CtrlHD/DON/MainFrame/W4NK3R, Tier 02 HQMUX, Tier 03
+hallowed/HONE/PTer, Tier 04 SPHD/WEBDV. op 900 added BHDStudio, **SPHD and WEBDV** to Tier 03 "to
+match Radarr" without checking Tier 04, so SPHD and WEBDV collected BOTH: a 2160p BluRay from SPHD
+scored **5300**, beating CtrlHD (a real Tier 01 group) at 3700.
+
+**THE LESSON: when porting a tier list from the other arr, diff against EVERY tier on this side,
+not just the one being edited.** Radarr is the reference and it keeps every group in exactly one
+tier; that invariant is what op 900 broke and this restores.
+
+Also fixed here: **Tier 04 was UNGUARDED**, the same defect op 900 corrected on Tier 01/02 but
+missed on 04 because 04 was outside its scope. Unguarded it paid +1800 on any source at any
+resolution, so inside the 4K profiles a 1080p WEB-DL from SPHD scored 1850 and a 720p HDTV from
+WEBDV scored 1805.
+
+BHDStudio STAYS in Tier 03 (it was in no UHD tier at all, so it scored 0 at 2160p, a genuine gap,
+and Radarr places it there too) but now carries a **-250** offset on the Sonarr side in the three
+profiles where it earns a tier score, mirroring Radarr's -75/-100/-250. Without it BHDStudio tied
+hallowed and HONE exactly.
+
+HiDt was added to Tier 04 rather than to a TRaSH tier, per the standing rule not to alter TRaSH
+formats to add a group. Radarr ranks it a rung higher (its UHD Tier 02), so 1800 here is slightly
+low; move it if that shows in practice.
