@@ -65,7 +65,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'Kitsune (Norg)', 'sonarr', 16);
@@ -106,8 +106,8 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'WEBRip (Norg)', 'sonarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'h265 (Norg)', 'sonarr', 50);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'iT', 'sonarr', 75);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'x265 (Norg)', 'sonarr', -25);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'HDR (Norg)', 'sonarr', 500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'x265 (Codec)', 'sonarr', -25);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'HDR10', 'sonarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'BR-DISK (BTN)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'Remux Tier 02', 'sonarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'Remux Tier 01', 'sonarr', 1900);
@@ -124,6 +124,14 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'PQ (Norg)', 'sonarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'RTW (Norg)', 'sonarr', 1000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p x265', 'Vyndros (Norg)', 'sonarr', 3500);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 720p, 1080p
+- WEBDL: 480p, 720p, 1080p
+- WEBRip: 480p, 720p, 1080p
+- HDTV: 720p, 1080p
+- Other: DVD, Unknown' WHERE name = '[Norg] 1080p x265';
 
 -- sonarr profile 12: 4K WebDL
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 4K WebDL', 1, 1600, 10000, 1);
@@ -183,7 +191,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'Kitsune (Norg)', 'sonarr', 16);
@@ -228,12 +236,19 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'Scene', 'sonarr', 100);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', '2160p', 'sonarr', 100);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'DD+ ATMOS', 'sonarr', 16);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'HDR (Norg)', 'sonarr', 500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'HDR10', 'sonarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'BR-DISK (BTN)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'DV Boost', 'sonarr', 1000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'DV (Disk)', 'sonarr', 101);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'Dual Audio (Norg)', 'sonarr', 50);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL', 'Flights (Norg)', 'sonarr', -1100);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 1080p
+- WEBDL: 1080p, 2160p
+- WEBRip: 1080p, 2160p
+- HDTV: 1080p, 2160p' WHERE name = '[Norg] 4K WebDL';
 
 -- sonarr profile 16: 4K Remux
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 4K Remux (Sonarr)', 1, 0, 10000, 1);
@@ -296,7 +311,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'LQ', 'sonarr', -10000);
@@ -337,7 +352,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'WEBRip (Norg)', 'sonarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'iT', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', '2160p', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'HDR (Norg)', 'sonarr', 500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'HDR10', 'sonarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'BR-DISK (BTN)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'DV Boost', 'sonarr', 1000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'Remux Tier 02', 'sonarr', 1850);
@@ -345,6 +360,13 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'DV (Disk)', 'sonarr', 101);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'FraMeSToR Remux (Norg)', 'sonarr', 1);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Sonarr)', 'HONE (Norg)', 'sonarr', 51);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Remux: 1080p, 2160p
+- Bluray: 1080p, 2160p
+- WEBDL: 1080p, 2160p
+- WEBRip: 1080p, 2160p' WHERE name = '[Norg] 4K Remux (Sonarr)';
 
 -- sonarr profile 17: 1080p Remux
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 1080p Remux (Sonarr)', 1, 0, 10000, 1);
@@ -408,7 +430,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Sonarr)', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Sonarr)', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Sonarr)', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Sonarr)', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Sonarr)', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Sonarr)', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Sonarr)', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Sonarr)', 'LQ', 'sonarr', -10000);
@@ -457,6 +479,13 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Sonarr)', 'HONE (Norg)', 'sonarr', 51);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Sonarr)', 'Remux Tier 03 (Norg)', 'sonarr', 1900);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Sonarr)', 'Remux Tier 04 (Norg)', 'sonarr', 1850);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Remux: 1080p
+- Bluray: 1080p
+- WEBDL: 1080p
+- WEBRip: 1080p' WHERE name = '[Norg] 1080p Remux (Sonarr)';
 
 -- sonarr profile 30: 4K Encode
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 4K Encode (Sonarr)', 1, 0, 10000, 1);
@@ -519,7 +548,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'Kitsune (Norg)', 'sonarr', 16);
@@ -541,7 +570,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'Repack/Proper', 'sonarr', 5);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'Repack2', 'sonarr', 6);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'Repack3', 'sonarr', 7);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'SDR (Norg)', 'sonarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'SDR (2160p)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'SDR (no WEBDL)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'SHO', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'STAN', 'sonarr', 75);
@@ -562,7 +591,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'WEBRip (Norg)', 'sonarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'iT', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', '2160p', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'HDR (Norg)', 'sonarr', 500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'HDR10', 'sonarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'BR-DISK (BTN)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'DV Boost', 'sonarr', 1000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'DV (Disk)', 'sonarr', 101);
@@ -572,6 +601,13 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'UHD Bluray Tier 03 (Norg)', 'sonarr', 1900);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'UHD Bluray Tier 04 (Norg)', 'sonarr', 1800);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Sonarr)', 'RandomBytes UHD Bluray (Norg)', 'sonarr', 1750);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 1080p, 2160p
+- WEBDL: 1080p, 2160p
+- WEBRip: 1080p, 2160p
+- HDTV: 1080p, 2160p' WHERE name = '[Norg] 4K Encode (Sonarr)';
 
 -- sonarr profile 41: 480p x265
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 480p x265', 1, 0, 10000, 1);
@@ -634,7 +670,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'LQ', 'sonarr', -10000);
@@ -673,7 +709,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'WEB Tier 03', 'sonarr', 1600);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'WEBRip (Norg)', 'sonarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'iT', 'sonarr', 75);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'x265 (Norg)', 'sonarr', 1);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'x265 (Codec)', 'sonarr', 1);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'BR-DISK (BTN)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'Remux Tier 02', 'sonarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'Remux Tier 01', 'sonarr', 1900);
@@ -690,6 +726,13 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'RTW (Norg)', 'sonarr', 1000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'Vertag (Norg)', 'sonarr', 4000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265', 'Vyndros (Norg)', 'sonarr', 3000);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 720p, 1080p
+- WEBDL: 480p, 720p, 1080p
+- WEBRip: 480p, 720p, 1080p
+- Other: DVD' WHERE name = '[Norg] 480p x265';
 
 -- sonarr profile 84: 1080p WebDL
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 1080p WebDL', 1, 0, 10000, 1);
@@ -755,7 +798,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'Kitsune (Norg)', 'sonarr', 16);
@@ -778,7 +821,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'Repack/Proper', 'sonarr', 5);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'Repack2', 'sonarr', 6);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'Repack3', 'sonarr', 7);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'SDR (Norg)', 'sonarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'SDR (2160p)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'SDR (no WEBDL)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'SHO', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'STAN', 'sonarr', 75);
@@ -799,7 +842,14 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'WEBRip (Norg)', 'sonarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'h265 (Norg)', 'sonarr', -125);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'iT', 'sonarr', 75);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'x265 (Norg)', 'sonarr', -250);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL', 'x265 (Codec)', 'sonarr', -250);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 1080p
+- WEBDL: 1080p
+- WEBRip: 1080p
+- HDTV: 1080p' WHERE name = '[Norg] 1080p WebDL';
 
 -- sonarr profile 85: 1080p Encode
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 1080p Encode (Sonarr)', 1, 0, 10000, 1);
@@ -867,7 +917,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'Kitsune (Norg)', 'sonarr', 16);
@@ -890,7 +940,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'Repack/Proper', 'sonarr', 5);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'Repack2', 'sonarr', 6);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'Repack3', 'sonarr', 7);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'SDR (Norg)', 'sonarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'SDR (2160p)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'SDR (no WEBDL)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'SHO', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'STAN', 'sonarr', 75);
@@ -909,21 +959,21 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'WEB Tier 03', 'sonarr', 1600);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'WEBRip (Norg)', 'sonarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'iT', 'sonarr', 75);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'FR Scene Groups (Norg)', 'sonarr', 650);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'FR LQ (Norg)', 'sonarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'FR Scene Groups', 'sonarr', 650);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'FR LQ', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', '5.1 Surround', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'DD+ ATMOS', 'sonarr', 50);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'DTS', 'sonarr', 50);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'DD+', 'sonarr', 50);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'German Bluray Tier 01 (Norg)', 'sonarr', 1500);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'German Bluray Tier 02 (Norg)', 'sonarr', 1450);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'German Bluray Tier 01', 'sonarr', 1500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'German Bluray Tier 02', 'sonarr', 1450);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'Remux Tier 02', 'sonarr', 1100);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'Remux Tier 01', 'sonarr', 1150);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'German LQ (Norg)', 'sonarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'German Scene (Norg)', 'sonarr', 650);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'German LQ (release title) (Norg)', 'sonarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'FR HD Bluray Tier 01 (Norg)', 'sonarr', 1500);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'German Bluray Tier 03 (Norg)', 'sonarr', 1400);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'German LQ', 'sonarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'German Scene', 'sonarr', 650);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'German LQ (release title)', 'sonarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'FR HD Bluray Tier 01', 'sonarr', 1500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'German Bluray Tier 03', 'sonarr', 1400);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'BTN Remux 1080p (Norg)', 'sonarr', 975);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'HD Bluray Tier 03 (Norg)', 'sonarr', 1900);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'HONE (Norg)', 'sonarr', 8);
@@ -933,6 +983,14 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'Remux Tier 04 (Norg)', 'sonarr', 1000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'ROVERS (Norg)', 'sonarr', 250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Sonarr)', 'stuxb (Norg)', 'sonarr', 1800);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Remux: 1080p
+- Bluray: 720p, 1080p
+- WEBDL: 1080p
+- WEBRip: 1080p
+- HDTV: 1080p' WHERE name = '[Norg] 1080p Encode (Sonarr)';
 
 -- sonarr profile 89: Anime (TRaSH)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] Anime (TRaSH)', 1, 100, 10000, 1);
@@ -1004,6 +1062,15 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] Anime (TRaSH)', 'Anime Web Tier 01', 'sonarr', 600);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] Anime (TRaSH)', 'Anime LQ Groups', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] Anime (TRaSH)', 'Anime BD Tier 02', 'sonarr', 1300);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Remux: 1080p
+- Bluray: 480p, 720p, 1080p
+- WEBDL: 480p, 720p, 1080p
+- WEBRip: 480p, 720p, 1080p
+- HDTV: 720p, 1080p
+- Other: DVD, SDTV' WHERE name = '[Norg] Anime (TRaSH)';
 
 -- sonarr profile 91: Anime
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] Anime', 1, 100, 10000, 1);
@@ -1090,6 +1157,14 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] Anime', 'HONE (Norg)', 'sonarr', 8);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] Anime', 'HONE Bluray (Norg)', 'sonarr', 1500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] Anime', 'Kitsune Bluray (Norg)', 'sonarr', 500);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 480p, 576p, 720p, 1080p
+- WEBDL: 480p, 720p, 1080p
+- WEBRip: 480p, 720p, 1080p
+- HDTV: 1080p
+- Other: DVD, SDTV' WHERE name = '[Norg] Anime';
 
 -- sonarr profile 93: Anime (CR)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] Anime (CR)', 1, 100, 10000, 1);
@@ -1177,6 +1252,14 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] Anime (CR)', 'HONE (Norg)', 'sonarr', 8);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] Anime (CR)', 'HONE Bluray (Norg)', 'sonarr', 1500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] Anime (CR)', 'Kitsune Bluray (Norg)', 'sonarr', 500);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 480p, 576p, 720p, 1080p
+- WEBDL: 480p, 720p, 1080p
+- WEBRip: 480p, 720p, 1080p
+- HDTV: 1080p
+- Other: DVD, SDTV' WHERE name = '[Norg] Anime (CR)';
 
 -- sonarr profile 104: 1080p WebDL (AMZN)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 1080p WebDL (AMZN)', 1, 0, 10000, 1);
@@ -1242,7 +1325,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'Kitsune (Norg)', 'sonarr', 16);
@@ -1265,7 +1348,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'Repack/Proper', 'sonarr', 5);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'Repack2', 'sonarr', 6);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'Repack3', 'sonarr', 7);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'SDR (Norg)', 'sonarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'SDR (2160p)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'SDR (no WEBDL)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'SHO', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'STAN', 'sonarr', 75);
@@ -1286,7 +1369,14 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'WEBRip (Norg)', 'sonarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'h265 (Norg)', 'sonarr', -125);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'iT', 'sonarr', 75);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'x265 (Norg)', 'sonarr', -250);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (AMZN)', 'x265 (Codec)', 'sonarr', -250);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 1080p
+- WEBDL: 1080p
+- WEBRip: 1080p
+- HDTV: 1080p' WHERE name = '[Norg] 1080p WebDL (AMZN)';
 
 -- sonarr profile 110: 1080p WebDL (DSNP)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 1080p WebDL (DSNP)', 1, 0, 10000, 1);
@@ -1352,7 +1442,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'Kitsune (Norg)', 'sonarr', 16);
@@ -1375,7 +1465,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'Repack/Proper', 'sonarr', 5);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'Repack2', 'sonarr', 6);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'Repack3', 'sonarr', 7);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'SDR (Norg)', 'sonarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'SDR (2160p)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'SDR (no WEBDL)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'SHO', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'STAN', 'sonarr', 75);
@@ -1396,7 +1486,14 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'WEBRip (Norg)', 'sonarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'h265 (Norg)', 'sonarr', -125);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'iT', 'sonarr', 75);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'x265 (Norg)', 'sonarr', -250);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (DSNP)', 'x265 (Codec)', 'sonarr', -250);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 1080p
+- WEBDL: 1080p
+- WEBRip: 1080p
+- HDTV: 1080p' WHERE name = '[Norg] 1080p WebDL (DSNP)';
 
 -- sonarr profile 111: 4K Encode (TrueHD)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 4K Encode (TrueHD)', 1, 0, 10000, 1);
@@ -1459,7 +1556,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'Kitsune (Norg)', 'sonarr', 51);
@@ -1481,7 +1578,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'Repack/Proper', 'sonarr', 5);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'Repack2', 'sonarr', 6);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'Repack3', 'sonarr', 7);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'SDR (Norg)', 'sonarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'SDR (2160p)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'SDR (no WEBDL)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'SHO', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'STAN', 'sonarr', 75);
@@ -1504,7 +1601,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'TrueHD ATMOS', 'sonarr', 2500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'TrueHD', 'sonarr', 2000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', '2160p', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'HDR (Norg)', 'sonarr', 500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'HDR10', 'sonarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'BR-DISK (BTN)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'DV Boost', 'sonarr', 1000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'DV (Disk)', 'sonarr', 101);
@@ -1513,6 +1610,13 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'UHD Bluray Tier 02 (Norg)', 'sonarr', 2000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'UHD Bluray Tier 03 (Norg)', 'sonarr', 1900);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (TrueHD)', 'UHD Bluray Tier 04 (Norg)', 'sonarr', 1800);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 1080p, 2160p
+- WEBDL: 1080p, 2160p
+- WEBRip: 1080p, 2160p
+- HDTV: 1080p, 2160p' WHERE name = '[Norg] 4K Encode (TrueHD)';
 
 -- sonarr profile 122: 4K WebDL (ATVP)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 4K WebDL (ATVP)', 1, 1600, 10000, 1);
@@ -1572,7 +1676,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'Kitsune (Norg)', 'sonarr', 16);
@@ -1617,12 +1721,19 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'Scene', 'sonarr', 100);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', '2160p', 'sonarr', 100);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'DD+ ATMOS', 'sonarr', 16);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'HDR (Norg)', 'sonarr', 500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'HDR10', 'sonarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'BR-DISK (BTN)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'DV Boost', 'sonarr', 1000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'DV (Disk)', 'sonarr', 101);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'Dual Audio (Norg)', 'sonarr', 50);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K WebDL (ATVP)', 'Flights (Norg)', 'sonarr', -1100);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 1080p
+- WEBDL: 1080p, 2160p
+- WEBRip: 1080p, 2160p
+- HDTV: 1080p, 2160p' WHERE name = '[Norg] 4K WebDL (ATVP)';
 
 -- sonarr profile 124: 1080p WebDL (HEVC)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 1080p WebDL (HEVC)', 1, 0, 10000, 1);
@@ -1688,7 +1799,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'Kitsune (Norg)', 'sonarr', 16);
@@ -1711,7 +1822,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'Repack/Proper', 'sonarr', 5);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'Repack2', 'sonarr', 6);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'Repack3', 'sonarr', 7);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'SDR (Norg)', 'sonarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'SDR (2160p)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'SDR (no WEBDL)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'SHO', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'STAN', 'sonarr', 75);
@@ -1732,7 +1843,14 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'WEBRip (Norg)', 'sonarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'h265 (Norg)', 'sonarr', 375);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'iT', 'sonarr', 75);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'x265 (Norg)', 'sonarr', -250);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (HEVC)', 'x265 (Codec)', 'sonarr', -250);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 1080p
+- WEBDL: 1080p
+- WEBRip: 1080p
+- HDTV: 1080p' WHERE name = '[Norg] 1080p WebDL (HEVC)';
 
 -- sonarr profile 125: 480p x265 (CtrlSD)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 480p x265 (CtrlSD)', 1, 0, 10000, 1);
@@ -1796,7 +1914,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'LQ', 'sonarr', -10000);
@@ -1835,7 +1953,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'WEB Tier 03', 'sonarr', 1600);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'WEBRip (Norg)', 'sonarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'iT', 'sonarr', 75);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'x265 (Norg)', 'sonarr', 1);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'x265 (Codec)', 'sonarr', 1);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'BR-DISK (BTN)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'Remux Tier 02', 'sonarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'Remux Tier 01', 'sonarr', 1900);
@@ -1852,6 +1970,13 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'RTW (Norg)', 'sonarr', 1000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'Vertag (Norg)', 'sonarr', 4000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (CtrlSD)', 'Vyndros (Norg)', 'sonarr', 3000);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 720p, 1080p
+- WEBDL: 480p, 720p, 1080p
+- WEBRip: 480p, 720p, 1080p
+- Other: DVD' WHERE name = '[Norg] 480p x265 (CtrlSD)';
 
 -- sonarr profile 126: 1080p WebDL (CtrlHD)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 1, 0, 10000, 1);
@@ -1887,11 +2012,11 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'Repack/Proper', 'sonarr', 5);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'Repack2', 'sonarr', 6);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'Repack3', 'sonarr', 7);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'x265 (Norg)', 'sonarr', -250);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'x265 (Codec)', 'sonarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'Bad Dual Groups', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'DV (w/o HDR fallback)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'No-RlsGroup', 'sonarr', -100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'SDR (Norg)', 'sonarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'SDR (2160p)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'SDR (no WEBDL)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'HD Bluray Tier 01', 'sonarr', 1800);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'HD Bluray Tier 02', 'sonarr', 1750);
@@ -1950,7 +2075,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'DSCP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'STRP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', '720p', 'sonarr', 5);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'MY5', 'sonarr', 75);
@@ -1963,6 +2088,13 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'BTN Bluray 1080p (Norg)', 'sonarr', 1775);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'BTN SD/720p (Norg)', 'sonarr', 300);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p WebDL (CtrlHD)', 'CtrlHD Bluray (Norg)', 'sonarr', 200);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 1080p
+- WEBDL: 1080p
+- WEBRip: 1080p
+- HDTV: 1080p' WHERE name = '[Norg] 1080p WebDL (CtrlHD)';
 
 -- sonarr profile 127: 480p x265 (BiOMA)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 480p x265 (BiOMA)', 1, 0, 10000, 1);
@@ -2026,7 +2158,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'LQ', 'sonarr', -10000);
@@ -2065,7 +2197,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'WEB Tier 03', 'sonarr', 1600);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'WEBRip (Norg)', 'sonarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'iT', 'sonarr', 75);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'x265 (Norg)', 'sonarr', 1);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'x265 (Codec)', 'sonarr', 1);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'BR-DISK (BTN)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'Remux Tier 02', 'sonarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'Remux Tier 01', 'sonarr', 1900);
@@ -2082,6 +2214,13 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'RTW (Norg)', 'sonarr', 1000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'Vertag (Norg)', 'sonarr', 4000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (BiOMA)', 'Vyndros (Norg)', 'sonarr', 3000);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 720p, 1080p
+- WEBDL: 480p, 720p, 1080p
+- WEBRip: 480p, 720p, 1080p
+- Other: DVD' WHERE name = '[Norg] 480p x265 (BiOMA)';
 
 -- sonarr profile 129: 480p x265 (AndreMor)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 480p x265 (AndreMor)', 1, 0, 10000, 1);
@@ -2145,7 +2284,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'HTSR', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'Hulu', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'Hybrid', 'sonarr', 100);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'INTERNAL (Norg)', 'sonarr', 10);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'Internal', 'sonarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'IP', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'ITVX', 'sonarr', 75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'LQ', 'sonarr', -10000);
@@ -2184,7 +2323,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'WEB Tier 03', 'sonarr', 1600);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'WEBRip (Norg)', 'sonarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'iT', 'sonarr', 75);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'x265 (Norg)', 'sonarr', 1);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'x265 (Codec)', 'sonarr', 1);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'BR-DISK (BTN)', 'sonarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'Remux Tier 02', 'sonarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'Remux Tier 01', 'sonarr', 1900);
@@ -2201,6 +2340,13 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'RTW (Norg)', 'sonarr', 1000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'Vertag (Norg)', 'sonarr', 4000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 480p x265 (AndreMor)', 'Vyndros (Norg)', 'sonarr', 3000);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Sonarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 720p, 1080p
+- WEBDL: 480p, 720p, 1080p
+- WEBRip: 480p, 720p, 1080p
+- Other: DVD' WHERE name = '[Norg] 480p x265 (AndreMor)';
 
 -- radarr profile 5: 4K Remux
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 4K Remux (Radarr)', 1, 2500, 10000, 1);
@@ -2253,8 +2399,8 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'TrueHD', 'radarr', 2750);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'WEB Tier 02', 'radarr', 1650);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'ATMOS (undefined)', 'radarr', 3000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'FR LQ (Norg)', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'HDR (Norg)', 'radarr', 500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'FR LQ', 'radarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'HDR10', 'radarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'TrueHD ATMOS', 'radarr', 5000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'UHD Bluray Tier 01 (Norg)', 'radarr', 1800);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'HD Bluray Tier 03 (Norg)', 'radarr', 1700);
@@ -2264,12 +2410,12 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'MP3', 'radarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Sing-Along Versions', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'hallowed', 'radarr', 600);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'FastSUB (Norg)', 'radarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'FastSUB', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Remux Tier 03 (Norg)', 'radarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'SiC', 'radarr', 11);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'DTS-HD HRA', 'radarr', 2000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'LQ', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'x265 (Norg)', 'radarr', 500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'x265 (Codec)', 'radarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'DV (w/o HDR fallback)', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Special Edition', 'radarr', 125);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'Masters of Cinema', 'radarr', 25);
@@ -2311,6 +2457,13 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'NNMClub (Norg)', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'stuxb (Norg)', 'radarr', 5000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Remux (Radarr)', 'WEBRip (Norg)', 'radarr', -250);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Radarr exactly as it runs there.
+
+Quality Profile that covers:
+- Remux: 1080p, 2160p
+- Bluray: 1080p, 2160p
+- WEBDL: 1080p, 2160p
+- WEBRip: 1080p, 2160p' WHERE name = '[Norg] 4K Remux (Radarr)';
 
 -- radarr profile 12: 1080p Remux
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 1080p Remux (Radarr)', 1, 0, 10000, 1);
@@ -2358,8 +2511,8 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'TrueHD', 'radarr', 2750);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'WEB Tier 02', 'radarr', 1650);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'ATMOS (undefined)', 'radarr', 3000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'FR LQ (Norg)', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'HDR (Norg)', 'radarr', 500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'FR LQ', 'radarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'HDR10', 'radarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'TrueHD ATMOS', 'radarr', 5000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'UHD Bluray Tier 01 (Norg)', 'radarr', 1800);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'HD Bluray Tier 03 (Norg)', 'radarr', 1700);
@@ -2369,12 +2522,12 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'MP3', 'radarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Sing-Along Versions', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'hallowed', 'radarr', 600);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'FastSUB (Norg)', 'radarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'FastSUB', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Remux Tier 03 (Norg)', 'radarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'SiC', 'radarr', 11);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'DTS-HD HRA', 'radarr', 2000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'LQ', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'x265 (Norg)', 'radarr', 500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'x265 (Codec)', 'radarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'DV (w/o HDR fallback)', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Special Edition', 'radarr', 125);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'Masters of Cinema', 'radarr', 25);
@@ -2414,6 +2567,10 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'HONE (Norg)', 'radarr', 51);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'NNMClub (Norg)', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Remux (Radarr)', 'WEBRip (Norg)', 'radarr', -250);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Radarr exactly as it runs there.
+
+Quality Profile that covers:
+- Remux: 1080p' WHERE name = '[Norg] 1080p Remux (Radarr)';
 
 -- radarr profile 19: 1080p Encode
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 1080p Encode (Radarr)', 1, 0, 10000, 1);
@@ -2456,8 +2613,8 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'DD+ ATMOS', 'radarr', 51);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'MA', 'radarr', 20);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'WEB Tier 02', 'radarr', 1650);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'FR LQ (Norg)', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'HDR (Norg)', 'radarr', -225);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'FR LQ', 'radarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'HDR10', 'radarr', -225);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'BHDStudio (Norg)', 'radarr', -75);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'HD Bluray Tier 03 (Norg)', 'radarr', 1700);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'Remaster', 'radarr', 25);
@@ -2465,7 +2622,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'VRV', 'radarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'Sing-Along Versions', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'hallowed', 'radarr', 600);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'FastSUB (Norg)', 'radarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'FastSUB', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'MainFrame', 'radarr', 12);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'SiC', 'radarr', 11);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'LQ', 'radarr', -10000);
@@ -2512,6 +2669,14 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'Vyndros (Norg)', 'radarr', 800);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'W4NK3R (Norg)', 'radarr', 12);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (Radarr)', 'WEBRip (Norg)', 'radarr', -250);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Radarr exactly as it runs there.
+
+Quality Profile that covers:
+- Remux: 1080p
+- Bluray: 1080p
+- WEBDL: 480p, 720p, 1080p
+- WEBRip: 1080p
+- Other: DVD' WHERE name = '[Norg] 1080p Encode (Radarr)';
 
 -- radarr profile 68: 4K SQP-2 (TRaSH)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 1, 550, 10000, 1);
@@ -2559,7 +2724,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'TrueHD', 'radarr', 2750);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'WEB Tier 02', 'radarr', 1650);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'ATMOS (undefined)', 'radarr', 3000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'HDR (Norg)', 'radarr', 500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'HDR10', 'radarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'TrueHD ATMOS', 'radarr', 5000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'UHD Bluray Tier 01 (Norg)', 'radarr', 2300);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'Remaster', 'radarr', 25);
@@ -2606,6 +2771,13 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'r00t DV HDR10+ (Norg)', 'radarr', 2001);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'W4NK3R (Norg)', 'radarr', 51);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K SQP-2 (TRaSH)', 'WEBRip (Norg)', 'radarr', -250);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Radarr exactly as it runs there.
+
+Quality Profile that covers:
+- Remux: 1080p, 2160p
+- Bluray: 2160p
+- WEBDL: 1080p, 2160p
+- WEBRip: 1080p, 2160p' WHERE name = '[Norg] 4K SQP-2 (TRaSH)';
 
 -- radarr profile 105: 4K Encode
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 4K Encode (Radarr)', 1, 0, 10000, 1);
@@ -2651,8 +2823,8 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'MA', 'radarr', 20);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'Remux Tier 01', 'radarr', 1950);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'WEB Tier 02', 'radarr', 1650);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'FR LQ (Norg)', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'HDR (Norg)', 'radarr', 500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'FR LQ', 'radarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'HDR10', 'radarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'UHD Bluray Tier 01 (Norg)', 'radarr', 1800);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'BHDStudio (Norg)', 'radarr', -100);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'HD Bluray Tier 03 (Norg)', 'radarr', 1700);
@@ -2661,7 +2833,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'VRV', 'radarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'Sing-Along Versions', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'hallowed', 'radarr', 600);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'FastSUB (Norg)', 'radarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'FastSUB', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'MainFrame', 'radarr', 51);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'Remux Tier 03 (Norg)', 'radarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'SiC', 'radarr', 11);
@@ -2711,6 +2883,12 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'W4NK3R (Norg)', 'radarr', 51);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'WEBRip (Norg)', 'radarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (Radarr)', 'WRS (Norg)', 'radarr', -10000);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Radarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 1080p, 2160p
+- WEBDL: 1080p, 2160p
+- WEBRip: 1080p, 2160p' WHERE name = '[Norg] 4K Encode (Radarr)';
 
 -- radarr profile 106: 1080p Encode (TRaSH)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 1080p Encode (TRaSH)', 1, 0, 10000, 1);
@@ -2785,6 +2963,12 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (TRaSH)', 'IMAX', 'radarr', 800);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (TRaSH)', 'DV (Disk)', 'radarr', 101);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 1080p Encode (TRaSH)', 'WEBRip (Norg)', 'radarr', -250);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Radarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 720p, 1080p
+- WEBDL: 1080p
+- WEBRip: 1080p' WHERE name = '[Norg] 1080p Encode (TRaSH)';
 
 -- radarr profile 107: 4K Encode (HONE)
 INSERT INTO quality_profiles (name, upgrades_allowed, minimum_custom_format_score, upgrade_until_score, upgrade_score_increment) VALUES ('[Norg] 4K Encode (HONE)', 1, 0, 10000, 1);
@@ -2830,8 +3014,8 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'MA', 'radarr', 20);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'Remux Tier 01', 'radarr', 1950);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'WEB Tier 02', 'radarr', 1650);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'FR LQ (Norg)', 'radarr', -10000);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'HDR (Norg)', 'radarr', 500);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'FR LQ', 'radarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'HDR10', 'radarr', 500);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'UHD Bluray Tier 01 (Norg)', 'radarr', 1800);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'BHDStudio (Norg)', 'radarr', -100);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'HD Bluray Tier 03 (Norg)', 'radarr', 1700);
@@ -2840,7 +3024,7 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'VRV', 'radarr', 10);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'Sing-Along Versions', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'hallowed', 'radarr', 600);
-INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'FastSUB (Norg)', 'radarr', -10000);
+INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'FastSUB', 'radarr', -10000);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'MainFrame', 'radarr', 51);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'Remux Tier 03 (Norg)', 'radarr', 1850);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'SiC', 'radarr', 11);
@@ -2890,4 +3074,10 @@ INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'W4NK3R (Norg)', 'radarr', 51);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'WEBRip (Norg)', 'radarr', -250);
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score) VALUES ('[Norg] 4K Encode (HONE)', 'WRS (Norg)', 'radarr', -10000);
+UPDATE quality_profiles SET description = 'Norg quality profile, imported from Radarr exactly as it runs there.
+
+Quality Profile that covers:
+- Bluray: 1080p, 2160p
+- WEBDL: 1080p, 2160p
+- WEBRip: 1080p, 2160p' WHERE name = '[Norg] 4K Encode (HONE)';
 

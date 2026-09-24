@@ -50,54 +50,72 @@ Local ops are numbered 900+ so they always replay after upstream.
 ## 901 / 902 -- the 1:1 import (2026-09-23)
 
 `901.norg-local-custom-formats.sql` and `902.norg-quality-profiles.sql` import the live
-Sonarr and Radarr configuration into this database exactly as it runs today.
+Sonarr and Radarr configuration exactly as it runs today: 88 custom formats, 2 corrections,
+and all 27 quality profiles (20 Sonarr, 7 Radarr) with 2,073 scores, 543 quality rows and
+42 quality groups. Verified against the live Arr APIs: 27/27 profiles, 0 discrepancies.
 
-**What landed:** 94 custom formats (92 new + 2 corrections) and all 27 quality profiles
-(20 Sonarr, 7 Radarr) with 2,073 custom-format scores, 543 quality rows and 42 quality
-groups. Verified by replay against the live Arr APIs: 27/27 profiles match, 0 discrepancies.
+**Naming.** A bare name means stock TRaSH. Ours are `<name> (Norg)` and `[Norg] <name>`.
+Only genuine deviations are tagged, so `(Norg)` never appears on something we did not author.
 
-**Naming.** A bare name always means stock TRaSH. Ours are `<name> (Norg)` for formats and
-`[Norg] <name>` for profiles. Only genuine deviations are tagged.
+**What is tagged, and why.** Every candidate was compared *structurally* against every
+upstream format (conditions, negation, required flags, and the symbolic source/resolution
+/language/quality-modifier values) rather than by name:
 
-**Where the formats came from.** Two sources: the 92 `local-*.json` files configarr manages,
-and 19 formats that exist only inside Sonarr/Radarr, because the PCD either renamed them
-(`HDR` -> `HDR10`, `SDR` -> `SDR (2160p)`) or deliberately deleted them (op 2 dropped the whole
-French/German set). Each of the 20 candidates was compared *structurally* against every
-upstream format rather than by name: only `HULU` matched one exactly, so it maps to the bare
-upstream `Hulu` and the other 19 were imported as `(Norg)`.
+- **86 formats are genuinely ours** and carry `(Norg)`. Of the 92 configarr `local-*.json`
+  definitions only one, `CR - Boost`, is structurally identical to an upstream format (`CR`);
+  it is kept separate on purpose, because it exists to stack a second score on the same match.
+- **7 were NOT ours and are no longer tagged.** They are stock TRaSH that this PCD merely
+  renamed, so they now reference the upstream format and keep tracking it:
+  `HULU` -> `Hulu`, `INTERNAL` -> `Internal`, `x265` -> `x265 (Codec)` (both arrs),
+  `HDR` -> `HDR10` (both arrs), `SDR` -> `SDR (2160p)`.
+- **10 are TRaSH formats this PCD deleted** (op 2 dropped the whole French/German set, and
+  `FastSUB` went with it). They keep their **bare TRaSH names**, because they are not our work
+  and the PCD dropped them, so the names are free. Known limitation: they are frozen copies,
+  not tracked, since there is nothing upstream here to track.
+- Only `BiOMA` and `AndreMor` were hand-made outside configarr, confirmed absent as top-level
+  formats from the TRaSH Guides repo.
 
 **Four profile names exist in both Arrs** (`4K Remux`, `1080p Remux`, `1080p Encode`,
-`4K Encode`) and their ladders genuinely differ, down to the quality vocabulary itself
-(Sonarr `Bluray-2160p Remux` vs Radarr `Remux-2160p`). A PCD profile has ONE ladder, so those
-four carry an app suffix. The other 23 do not: only disambiguate where there is a collision.
+`4K Encode`) and their ladders genuinely differ, down to the vocabulary (Sonarr
+`Bluray-2160p Remux` vs Radarr `Remux-2160p`). A PCD profile has ONE ladder, so those four
+carry an app suffix. The other 23 do not: disambiguate only where there is a collision.
 
-**Dual-defined formats become ONE format with per-arr conditions** via `arr_type`, which is
-what that column is for. Several only *looked* different because the source enum differs per
-app (Sonarr Bluray=6, Radarr Bluray=9; Sonarr WEBRip=4, Radarr WEBRip=8); PCD stores the
-symbolic value, so those collapse to `arr_type='all'`. Genuinely different ones (the `HONE`
-regex is `^(HONE|DiscoD|Weasley)$` on Sonarr and `^(HONE)$` on Radarr) keep one condition per
-app, with the app appended to the condition name because `(format, condition)` is a UNIQUE key.
+**Dual-defined formats become ONE format with per-arr conditions.** Several only looked
+different because the source enum differs per app (Sonarr Bluray=6, Radarr Bluray=9; Sonarr
+WEBRip=4, Radarr WEBRip=8) and the PCD stores the symbolic value, so those collapse to
+`arr_type='all'`. Genuinely different ones keep one condition per app, with the app appended
+to the condition name because `(format, condition)` is a UNIQUE key.
 
-**Three decisions worth knowing, because they are not mechanical:**
+**Descriptions** are generated for all 96 of our formats and all 27 profiles, in the upstream
+style: a bold name, provenance, then the matched groups, sources, resolutions and languages
+read from the format's own conditions. Profiles use the upstream
+"Quality Profile that covers:" list, built from the qualities actually enabled.
 
-1. **`HD Bluray Tier 04` becomes `HD Bluray Tier 03 (Norg)`.** The live Sonarr format named
-   "Tier 04" holds the 18 groups that op 900 put in Tier 03, and it scores 1900, which is
-   exactly what op 900 assigned Tier 03. The score follows the content, not the old name.
-2. **op 900's `HD Bluray Tier 04 (Norg)` is left UNSCORED.** It is the gap-fill for groups
-   with no Bluray tier at all, so scoring it would change today's results, and the standing
-   instruction was that current scoring must not change. Scoring it is a separate decision.
-   Note it overlaps `HONE Bluray (Norg)`, so scoring both would double-count HONE.
-3. **`hallowed Bluray (Norg)` and `HONE Bluray (Norg)` are corrected here.** op 900 created
-   them without the Bluray source guard that the real formats carry, and narrowed HONE's regex.
-   op 901 deletes their whole condition set (the value tables too, or the re-insert trips the
-   `condition_patterns` UNIQUE key) and rebuilds them to match the Arrs. Their live Sonarr
-   scores (1200/1500/1500) are imported as-is; op 900's "score 0" was based on a wrong belief
-   that they did not already exist in Sonarr.
+**Two scoring decisions:**
 
-**Regexes are reused by pattern, not recreated:** 988 of the 1,173 patterns resolve to an
-existing upstream `regular_expressions` row, so a TRaSH fix to a release-group pattern
-propagates into the Norg formats on the next `git merge upstream/main`. Only 185 are new.
+1. **`HD Bluray Tier 04` becomes `HD Bluray Tier 03 (Norg)`.** The live Sonarr format under
+   that name holds the 18 groups op 900 put in Tier 03, scored 1900, which is exactly what
+   op 900 assigned Tier 03. The score follows the content, not the old name.
+2. **op 900's `HD Bluray Tier 04 (Norg)` is left unscored**, so today's scoring is unchanged.
+   It overlaps `HONE Bluray (Norg)`, so scoring both would double-count HONE.
 
-**Upstream is untouched, and that is asserted rather than assumed:** all 1,982 upstream
-condition rows and all 1,457 upstream profile scores are byte-identical to a pristine
-trash-pcd replay.
+**`hallowed Bluray (Norg)` and `HONE Bluray (Norg)` are corrected here.** op 900 created them
+without the Bluray source guard the real formats carry and narrowed HONE's regex. op 901
+deletes their whole condition set, the value tables included, or the re-insert trips the
+`condition_patterns` UNIQUE key, then rebuilds them to match the Arrs.
+
+**Regexes are reused by pattern:** 988 of 1,173 resolve to an existing upstream
+`regular_expressions` row, so a TRaSH fix to a release-group pattern propagates into our
+formats on the next `git merge upstream/main`. Only 185 are new.
+
+**(!) REPLAY THIS DATABASE WITH `PRAGMA foreign_keys=ON`.** The schema carries 32
+`ON UPDATE CASCADE` clauses and the upstream rename ops depend on them, but the `sqlite3`
+CLI defaults foreign keys OFF. Replaying without it silently strips the conditions from every
+renamed format (`HDR10`, `SDR (2160p)`, `x265 (Codec)`, `Internal`, `Hulu` all came back
+empty) and leaves 564 orphaned condition rows behind. That produces convincing but wrong
+answers: four upstream ops appear to fail on a UNIQUE constraint, and formats that DO exist
+upstream look absent, which is what made 7 formats get wrongly tagged `(Norg)` on the first
+attempt. With the pragma on, the full 149-op replay is clean: 0 errors, 0 orphans.
+
+**Upstream is untouched, asserted not assumed:** all 1,442 upstream condition rows and all
+1,457 upstream profile scores are identical to a pristine trash-pcd replay.
