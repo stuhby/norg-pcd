@@ -363,7 +363,7 @@ previous head (timestamps normalised): exactly one row removed.
 Torrent delay 60 -> 0 on both `Norg (live)` delay profiles, usenet unchanged at 15 min. It only
 makes sense together with two changes outside this repo, made the same day:
 
-- **Prowlarr** app profile 2 `Private Tracker (search only)`: RSS OFF for TorrentLeech, SeedPool
+- **Prowlarr** app profile 2 `Private Tracker (No RSS)`: RSS OFF for TorrentLeech, SeedPool
   and RetroToon; automatic + interactive search ON. The arrs no longer see fresh torrents via RSS.
 - **autobrr** (all three trackers announce over IRC): filters 1/2 push FREELEECH releases at
   announce (priority 30); qui cross-seed (20) and ratio racing (10) unchanged; new filters 5/6 push
