@@ -349,3 +349,11 @@ The companion delay-profile drift (`minimumCustomFormatScore` live 3341/3000 vs 
 was fixed on the Arr side, not here: the schema forbids storing a threshold while
 `bypass_if_above_custom_format_score` is off, and with it off the threshold was inert, so
 both Arrs were set to 0.
+
+## 911 -- drop upstream's Default delay profile (2026-09-24)
+
+trash-pcd op 61 adds a stock `Default` delay profile (prefer torrent, 0/0). Nothing syncs it;
+both arrs use `Norg Sonarr (live)` / `Norg Radarr (live)`, and selecting it by mistake would
+flip both arrs to torrent-first with no delay. It was deleted in the Profilarr UI first, which
+stores a LOCAL op outside git, so op 911 carries it into the repo. Full-dump diff against the
+previous head (timestamps normalised): exactly one row removed.
