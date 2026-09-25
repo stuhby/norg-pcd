@@ -1,8 +1,9 @@
 # Norg local additions
 
 This repo tracks `Dictionarry-Hub/trash-pcd` upstream and adds Sonarr-side gap
-fills on top. **No upstream custom format is ever modified.** Bare names are
-stock TRaSH; everything local carries a `(Norg)` suffix.
+fills on top. **No upstream custom format is ever modified.** Custom formats: bare names
+are stock TRaSH and ours carry a `(Norg)` suffix. Quality profiles: bare names are
+ours, and `[TRaSH]` / `[Dict]` mark profiles based on that database (see 909).
 
 ## Why these exist
 
@@ -55,6 +56,7 @@ and all 27 quality profiles (20 Sonarr, 7 Radarr) with 2,073 scores, 543 quality
 42 quality groups. Verified against the live Arr APIs: 27/27 profiles, 0 discrepancies.
 
 **Naming.** A bare name means stock TRaSH. Ours are `<name> (Norg)` and `[Norg] <name>`.
+(Superseded for PROFILES by 909: profiles dropped `[Norg]`. Custom formats still follow this.)
 Only genuine deviations are tagged, so `(Norg)` never appears on something we did not author.
 
 **What is tagged, and why.** Every candidate was compared *structurally* against every
@@ -289,3 +291,43 @@ hallowed and HONE exactly.
 HiDt was added to Tier 04 rather than to a TRaSH tier, per the standing rule not to alter TRaSH
 formats to add a group. Radarr ranks it a rung higher (its UHD Tier 02), so 1800 here is slightly
 low; move it if that shows in practice.
+
+## 909 -- profile naming (2026-09-24)
+
+The `[Norg] ` prefix is gone from every quality profile. It sat on all 27 profiles anyone
+actually picks, so it carried no information. The convention for **profiles** is now:
+
+| form | meaning | examples |
+|---|---|---|
+| bare name | ours | `1080p WebDL`, `Anime`, `4K Encode (Radarr)` |
+| `[TRaSH] <name>` / `[Dict] <name>` | based on that database's profile, stock or customised | `[TRaSH] Anime`, `[TRaSH] 4K SQP-2`, `[Dict] 2160p Quality` |
+| trailing `(Word)` | a child variant of a main profile | `1080p WebDL (AMZN)`, `Anime (CR)`, `4K Encode (HONE)` |
+
+The three former `(TRaSH)` profiles moved to the prefix: `Anime (TRaSH)` -> `[TRaSH] Anime`,
+`4K SQP-2 (TRaSH)` -> `[TRaSH] 4K SQP-2`, `1080p Encode (TRaSH)` -> `[TRaSH] 1080p Encode`.
+`[Dict]` comes from the local op on the Dictionarry database, not from this repo.
+
+**`(Sonarr)` / `(Radarr)` is NOT a child marker and cannot be dropped.** `quality_profiles.name`
+is UNIQUE and a profile carries ONE quality ladder and one set of score thresholds for every arr
+it is pushed to (only the format SCORES can differ per arr). The four pairs that carry the
+suffix were compared live and all genuinely differ: `4K Remux` (minimum score 0 vs 2500, and
+different groupings), `1080p Remux` (Radarr is remux-only), `1080p Encode` and `4K Encode`
+(different ladders and cutoffs; Sonarr's 4K Encode also accepts HDTV). Merging a pair would
+change what gets grabbed.
+
+**Custom formats are unchanged:** bare = stock TRaSH, `(Norg)` = ours. Stock is the common case
+there, so the bare name still means the common case in both lists.
+
+**(!) Profilarr matches arr profiles by EXACT NAME and CREATES any name it does not find.** So
+the live Sonarr and Radarr profiles were renamed in place (same ids, every series and movie
+still attached) BEFORE this op was published, and Profilarr's per-instance sync selections
+(`arr_sync_quality_profiles.profile_name`) were renamed to match. Renaming only here would have
+made the next sync create 27 empty duplicates beside the originals.
+
+Verified by replaying the database with and without this op and diffing every profile table
+with the rename applied: 0 differences across 3,534 scores, 1,114 ladder rows, 124 groups,
+342 group members, 27 languages and 22 tags, plus one custom-format description
+(`BHDStudio (Norg)`) that named a renamed profile. The diff was positive-controlled with a
+one-point score change, which it caught.
+
+Sections above this one are historical and keep the names that were current when written.

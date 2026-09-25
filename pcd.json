@@ -1,7 +1,7 @@
 {
     "name": "norg-pcd",
     "version": "1.0.0",
-    "description": "TRaSH Guides plus Norg-local Sonarr gap fills. Tracks Dictionarry-Hub/trash-pcd upstream; all local additions are (Norg)-tagged and no upstream format is modified.",
+    "description": "TRaSH Guides plus Norg-local Sonarr gap fills. Tracks Dictionarry-Hub/trash-pcd upstream; local custom formats are (Norg)-tagged, local quality profiles are bare-named, and no upstream format is modified.",
     "arr_types": [
         "radarr",
         "sonarr"
