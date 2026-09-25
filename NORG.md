@@ -387,3 +387,13 @@ existing file from its filename, so one release scored 50 at grab and 40 on disk
 copy on another indexer read as a +10 upgrade (The Daily Show re-downloaded 5x in one morning).
 **General rule: never score a format that only the FILENAME can match (audio/HDR/codec written by the
 naming format) unless release titles carry it too, or grab-vs-disk scores diverge and loop.**
+
+## 914 -- Scene blocked across all Norg profiles (2026-09-25)
+
+TRaSH's optional `Scene` format at **-10000** in all 27 Norg profiles, per the TRaSH guide's optional
+"Scene: -10000". Scene WEB releases were always the first grab and always replaced (CAKES 25/25,
+ETHEL 6/6, EDITH 5/5, GRACE 5/5 over 27 days, median 47 min). Three profiles previously REWARDED scene
+and were flipped: `1080p Encode (Radarr)` +500, `4K WebDL` and `4K WebDL (ATVP)` +100.
+**Accepted cost:** shows whose only release is scene (Documentary Now!, Sins of the Amish, Trafficked
+via KOGI; Saturday Night Live, The Great British Bake Off via EDITH) no longer auto-grab; they need a
+manual grab or a per-show profile exception.
