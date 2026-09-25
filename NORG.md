@@ -377,3 +377,13 @@ delay; of the held releases later grabbed, 161 went usenet and 1 torrent.
 
 Delays count from the release's PUBLISH time, so they only decide races for fresh releases.
 Searches for back-catalog are unaffected (quality, then score, then protocol).
+
+## 913 -- `2.0 Stereo` penalty removed (2026-09-25)
+
+`2.0 Stereo` -10 -> 0 in the six Norg Sonarr profiles that scored it (`1080p WebDL` and its
+AMZN/DSNP/HEVC/CtrlHD variants, `1080p Encode (Sonarr)`). It caused an upgrade loop: scene WEB titles
+never state audio, but the naming format writes `[AAC 2.0]` into the filename and Sonarr scores an
+existing file from its filename, so one release scored 50 at grab and 40 on disk, and every identical
+copy on another indexer read as a +10 upgrade (The Daily Show re-downloaded 5x in one morning).
+**General rule: never score a format that only the FILENAME can match (audio/HDR/codec written by the
+naming format) unless release titles carry it too, or grab-vs-disk scores diverge and loop.**
