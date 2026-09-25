@@ -331,3 +331,21 @@ with the rename applied: 0 differences across 3,534 scores, 1,114 ladder rows, 1
 one-point score change, which it caught.
 
 Sections above this one are historical and keep the names that were current when written.
+
+## 910 -- "Unlimited" is 0, not the slider ceiling (2026-09-24)
+
+op 907 copied the live quality definitions verbatim, and the Arr API reports an "Unlimited"
+maximum as the slider's ceiling: **1000** MB/min on Sonarr, **2000** on Radarr. The PCD writes
+unlimited as **0** (every upstream config does: 77 rows at 0, none at a ceiling), Profilarr
+pushes 0 as null, and its drift check reads an Arr value at the ceiling as null. So the stored
+1000/2000 compared as `expected=1000 actual=null` and showed as drift on all 34 rows that
+never went away. op 910 rewrites exactly those rows to 0. Rows below the ceiling are real
+caps and are untouched.
+
+**Rule for future imports: map an Arr value equal to the ceiling (Sonarr 1000, Radarr 2000)
+to 0 before storing it.** The ceilings are Profilarr's `QUALITY_DEFINITION_UNLIMITED_MAX`.
+
+The companion delay-profile drift (`minimumCustomFormatScore` live 3341/3000 vs expected 0)
+was fixed on the Arr side, not here: the schema forbids storing a threshold while
+`bypass_if_above_custom_format_score` is off, and with it off the threshold was inert, so
+both Arrs were set to 0.
