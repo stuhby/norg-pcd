@@ -1,0 +1,22 @@
+-- 912.norg-torrent-delay-zero.sql
+--
+-- Torrent delay 60 -> 0 on both Norg (live) delay profiles (2026-09-24). Usenet stays
+-- preferred at 15 min. This is one half of a routing change made at the same time:
+--
+--   * Prowlarr: TorrentLeech, SeedPool and RetroToon moved to an app profile with RSS OFF
+--     (automatic + interactive search stay on). The arrs therefore never see a FRESH torrent
+--     through their own RSS any more.
+--   * autobrr is now the only source of fresh torrents: filters 1/2 push FREELEECH releases at
+--     announce; filters 5/6 push ANY release after a 60 min autobrr-side delay. Both are
+--     scoped to monitored titles by autobrr Lists.
+--
+-- With torrent delay 0, a freeleech announce wins immediately; a non-freeleech release only
+-- arrives after 60 min, i.e. the old "torrent after an hour if usenet had nothing" rule, now
+-- enforced in autobrr where it can depend on freeleech. The arrs cannot express that split:
+-- a delay applies to every torrent, and custom formats cannot see protocol.
+--
+-- (!) Do NOT sync this delay profile with the old 60 while torrent RSS is off: that alone
+-- would delay freeleech pushes by an hour, and usenet would win almost every race again
+-- (measured before the change: 3,984 pushes held, 161 of the 162 later grabs went usenet).
+
+UPDATE delay_profiles SET torrent_delay = 0 WHERE name IN ('Norg Sonarr (live)', 'Norg Radarr (live)');

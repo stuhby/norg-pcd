@@ -357,3 +357,23 @@ both arrs use `Norg Sonarr (live)` / `Norg Radarr (live)`, and selecting it by m
 flip both arrs to torrent-first with no delay. It was deleted in the Profilarr UI first, which
 stores a LOCAL op outside git, so op 911 carries it into the repo. Full-dump diff against the
 previous head (timestamps normalised): exactly one row removed.
+
+## 912 -- torrent delay 0; autobrr owns fresh-torrent timing (2026-09-24)
+
+Torrent delay 60 -> 0 on both `Norg (live)` delay profiles, usenet unchanged at 15 min. It only
+makes sense together with two changes outside this repo, made the same day:
+
+- **Prowlarr** app profile 2 `Private Tracker (search only)`: RSS OFF for TorrentLeech, SeedPool
+  and RetroToon; automatic + interactive search ON. The arrs no longer see fresh torrents via RSS.
+- **autobrr** (all three trackers announce over IRC): filters 1/2 push FREELEECH releases at
+  announce (priority 30); qui cross-seed (20) and ratio racing (10) unchanged; new filters 5/6 push
+  ANY release to Sonarr/Radarr after a **60 min** autobrr-side delay (priority 0). Filters 1/2/5/6
+  are scoped to monitored titles by autobrr Lists.
+
+Why the split lives in autobrr: an arr delay applies to every torrent however it arrives, and a
+custom format cannot see protocol, so the arrs cannot say "usenet first unless freeleech".
+Measured before the change (27 days): 14,653 freeleech pushes, 0 approved; 3,984 held by the 60 min
+delay; of the held releases later grabbed, 161 went usenet and 1 torrent.
+
+Delays count from the release's PUBLISH time, so they only decide races for fresh releases.
+Searches for back-catalog are unaffected (quality, then score, then protocol).
