@@ -438,3 +438,11 @@ Operator rule: transparency-focused encodes rank above size-focused ones. `HD Bl
 holds only HiFi, LoRD, playHD, SPHD and W4NK3R; BHDStudio, hallowed and HONE moved to the new
 `HD Bluray Balanced (Norg)`. `1080p Encode (Sonarr)`: Tier 04 1850, Balanced 1825. `1080p Encode (Remux
 Fallback)`: Tier 04 1875 (a top tier, above every remux), Balanced 1225 (below every remux).
+
+## 917 -- Remux Fallback: no DTS bonus, Dictionarry tie-break inside tiers (2026-10-17)
+
+In `1080p Encode (Remux Fallback)` only: DTS +50 -> 0 (it reordered groups by audio: an NTb DTS encode beat
+a DON AC3 encode). New `Dict Rank 1-4 (Norg)` formats copy the group lists of Dictionarry `1080p Quality
+Tier 1-4` and add +40/+30/+20/+10 inside each tier, so TRaSH Tier 01 orders DON > CtrlHD, EbP > NTb >
+Chotab, PTer. Tiers re-spaced: 2600 / 2450 / 2300 (03) / 2150 (04) / 2000 (05) / 1900 (06) / 1850 (stuxb) /
+1800 (07). **(!) The Dict Rank lists are copies: refresh them if Dictionarry re-tiers.**
