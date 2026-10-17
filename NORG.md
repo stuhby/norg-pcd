@@ -414,7 +414,7 @@ with only these scores changed:
 | | HD Bluray Tier 07 (Norg), new | 1775 |
 | remux | Remux Tier 01 / 02 / 03 (Norg) / 04 (Norg) / 05 (Norg, new) | 1550 / 1525 / 1500 / 1475 / 1450 |
 | | BTN Remux 1080p (Norg) | 1425 |
-| lower encodes | HD Bluray Tier 04 (Norg), Kitsune Bluray (Norg) | 1225 |
+| lower encodes | HD Bluray Tier 04 (Norg), Kitsune Bluray (Norg) | 1225 (916: Tier 04 is 1875, Balanced 1225) |
 | | BTN Bluray 1080p (Norg) | 1175 |
 
 New formats: **HD Bluray Tier 05/06/07 (Norg)** = Dictionarry `1080p Quality Tier 1/2/3` groups that no
@@ -431,3 +431,10 @@ HONE, ...) now ranks a tiered remux above it, so it will upgrade to a remux or a
 **Sonarr vs Radarr conditions:** TRaSH tiers carry per-arr conditions. Sonarr's HD Bluray Tier 01 is
 only Chotab CtrlHD DON EbP NTb PTer and Tier 02 SA89 SbR; the much longer lists are `arr_type='radarr'`.
 Filter by `arr_type IN ('all','sonarr')` before comparing group coverage.
+
+## 916 -- size-focused encoders split out of Tier 04 (2026-10-17)
+
+Operator rule: transparency-focused encodes rank above size-focused ones. `HD Bluray Tier 04 (Norg)` now
+holds only HiFi, LoRD, playHD, SPHD and W4NK3R; BHDStudio, hallowed and HONE moved to the new
+`HD Bluray Balanced (Norg)`. `1080p Encode (Sonarr)`: Tier 04 1850, Balanced 1825. `1080p Encode (Remux
+Fallback)`: Tier 04 1875 (a top tier, above every remux), Balanced 1225 (below every remux).
