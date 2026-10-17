@@ -446,3 +446,12 @@ a DON AC3 encode). New `Dict Rank 1-4 (Norg)` formats copy the group lists of Di
 Tier 1-4` and add +40/+30/+20/+10 inside each tier, so TRaSH Tier 01 orders DON > CtrlHD, EbP > NTb >
 Chotab, PTer. Tiers re-spaced: 2600 / 2450 / 2300 (03) / 2150 (04) / 2000 (05) / 1900 (06) / 1850 (stuxb) /
 1800 (07). **(!) The Dict Rank lists are copies: refresh them if Dictionarry re-tiers.**
+
+## 918 -- `1080p Encode (WebDL Fallback)` (2026-10-17)
+
+`1080p WebDL` unchanged, plus the top-tier Bluray encode ranking of `1080p Encode (Remux Fallback)`, so a
+top-tier encode replaces WEB and nothing else does. Bluray-1080p joins the WEB group (renamed `WEB +
+Bluray 1080p`) because in `1080p WebDL` WEB is a higher QUALITY and no encode could ever replace it. Encode
+tiers keep the Remux Fallback order, 400 higher (Tier 01 3000 ... Tier 07 2200) so the lowest top tier
+beats the best WEB release (~2020); Dict Rank tie-break as in 917; DTS 0; BTN Bluray and HD Bluray Balanced 0.
+Remux stays off.
