@@ -397,3 +397,37 @@ and were flipped: `1080p Encode (Radarr)` +500, `4K WebDL` and `4K WebDL (ATVP)`
 **Accepted cost:** shows whose only release is scene (Documentary Now!, Sins of the Amish, Trafficked
 via KOGI; Saturday Night Live, The Great British Bake Off via EDITH) no longer auto-grab; they need a
 manual grab or a per-show profile exception.
+
+## 915 -- `1080p Encode (Remux Fallback)` (2026-10-17)
+
+A Sonarr profile for shows where a top-tier encode is wanted, and the remux is kept when none exists.
+It is a copy of `1080p Encode (Sonarr)` made at replay time (same ladder: Bluray-1080p and Remux-1080p
+share one quality group, so the score decides between them; WEB is a lower group and never competes),
+with only these scores changed:
+
+| band | formats | score |
+|---|---|---|
+| top encodes | HD Bluray Tier 01 / 02 (TRaSH) | 2600 / 2500 |
+| | HD Bluray Tier 03 (Norg) | 1900 |
+| | HD Bluray Tier 05 / 06 (Norg), new | 1850 / 1825 |
+| | stuxb (Norg) | 1800 |
+| | HD Bluray Tier 07 (Norg), new | 1775 |
+| remux | Remux Tier 01 / 02 / 03 (Norg) / 04 (Norg) / 05 (Norg, new) | 1550 / 1525 / 1500 / 1475 / 1450 |
+| | BTN Remux 1080p (Norg) | 1425 |
+| lower encodes | HD Bluray Tier 04 (Norg), Kitsune Bluray (Norg) | 1225 |
+| | BTN Bluray 1080p (Norg) | 1175 |
+
+New formats: **HD Bluray Tier 05/06/07 (Norg)** = Dictionarry `1080p Quality Tier 1/2/3` groups that no
+Sonarr-side TRaSH or Norg tier covers (05: coffee, REBORN, SoLaR, TeamSyndicate; 06: 0BSiDiAN; 07: BV,
+FoRM, HiDt, HiP, iFT, Skazhutin, WMING). **Remux Tier 05 (Norg)** = BiZKiT, CiNEPHiLES, SURFINBIRD,
+TEPES, iFT (tiered by TRaSH for Radarr only, or not at all). They are scored only in this profile.
+
+In `1080p Encode (Sonarr)` every ranked Bluray encode (Tier 04 and BTN Bluray included) outranks every
+remux tier, so a held remux is replaced by any ranked encode. Here only top-tier encodes do. Gaps
+between bands exceed what the stackable extras (1080p, DTS, Hybrid, Remaster, Repack, Internal) can add.
+**Consequence when moving a series onto it:** a series holding a Tier 04 encode (BHDStudio, hallowed,
+HONE, ...) now ranks a tiered remux above it, so it will upgrade to a remux or a top-tier encode.
+
+**Sonarr vs Radarr conditions:** TRaSH tiers carry per-arr conditions. Sonarr's HD Bluray Tier 01 is
+only Chotab CtrlHD DON EbP NTb PTer and Tier 02 SA89 SbR; the much longer lists are `arr_type='radarr'`.
+Filter by `arr_type IN ('all','sonarr')` before comparing group coverage.
